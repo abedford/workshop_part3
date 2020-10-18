@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+ <head>
+  <title>Submit New Film</title>
+ </head>
+{% block title %}Submit a new film to the database{% endblock %}
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Submit a new film and it's rating</h1>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <form action="/films/submit" method = "POST">
+        <p>Name <input type = "text"  name = "Name" /></p>
+        <p>Rating <input type = "number"  name = "Star Rating (1 to 5)" min="1" max="5"/></p>
+        <p><input type = "submit" value = "Submit" /></p>
+    </form>
+ </body>
+</html>

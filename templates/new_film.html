@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+ <head>
+  <title>Submit New Film</title>
+ </head>
+
+ <body>
+
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Submit a new film to the database</h1>
+            <hr>
+          </div>
+        </div>
+      </div>
+    <form action="/films/submit" method = "POST">
+        <p>Name <input type = "text" name = "Name" /></p>
+        <p>Rating <input type = "number" name = "Star" min="1" max="5"/></p>
+        <p><input type = "submit" value = "Submit" /></p>
+    </form>
+
+    {% if feedback %}
+        <p class="text-danger float-right">{{ feedback }}</p>
+    {% endif %}
+ </body>
+</html>
